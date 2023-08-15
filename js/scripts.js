@@ -2,7 +2,8 @@
 function newItem(){
 
     //javascript
-    //1. Adding a new item to the list of items: 
+    //1. Adding a new item to the list of items:
+
        let li = $('<li></li>');
        let inputValue = $('#input').val();
        li.appendChild(inputValue);
@@ -13,12 +14,17 @@ function newItem(){
          $('#list').append(li);
        }
     
-     //2. Crossing out an item from the list of items:
+     //2. Crossing out an item from the list of items: 
+//function crossout is going to make the li element toggle between 
+//being crossed out or not depending on the event of double clicking it.
+
        function crossOut() {
-             li.classList.toggle("strike");
+             li.toggleClass("strike");
          }
     
-         li.addEventListener("dblclick",crossOut);
+         li.on("dblclick", function crossOut () {
+            li.toggleClass("strike");
+         });
     
      //3(i). Adding the delete button "X": 
        let crossOutButton = document.createElement("crossOutButton");
