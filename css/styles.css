@@ -4,6 +4,7 @@
 body {
 font: normal normal 13px/16px "Open Sans", sans-serif;
 background: #dfdfdf;
+text-align: center;
 }
 
 .container{
@@ -11,8 +12,11 @@ padding: 20px;
 width: 300px;
 margin: 0 auto;
 margin-top: 40px;
-background: white;
-border-radius: 5px;}
+background: #F3f4ce;
+border-radius: 10px;
+border:2px solid #000;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 form {
 display: inline-block;
@@ -24,7 +28,7 @@ padding: 4px 15px 4px 5px;
 
 #button{
 display: inline-block;
-background-color:#fc999b;
+background-color:#1348fc;
 color:#ffffff;
 border-radius: 5px;
 text-align:center;

@@ -1,12 +1,11 @@
 
 function newItem(){
 
-    //javascript
     //1. Adding a new item to the list of items: DONE.
 
        let li = $('<li></li>');
        let inputValue = $('#input').val();
-       li.appendChild(inputValue);
+       li.append(inputValue);
     
        if (inputValue === '') {
          alert("You must write something!");
@@ -30,7 +29,7 @@ function newItem(){
      //custom element crossOutButton represent the x delete button for each itm
      //event of clicking on the x will delete the item
 
-       let crossOutButton = $("<crossOutButton></crossOutButton>");
+       let crossOutButton = $('<crossOutButton></crossOutButton>');
          crossOutButton.append(document.createTextNode("X"));
          li.append(crossOutButton);
     
