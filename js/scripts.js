@@ -1,6 +1,12 @@
+$('#input').on('keydown', function(event) {
+    if(event.key === 'Enter') {
+        event.preventDefault();
+        newItem();
+    }
+});
 
 function newItem(){
-
+  
     //1. Adding a new item to the list of items: DONE.
 
        let li = $('<li></li>');
@@ -11,6 +17,7 @@ function newItem(){
          alert("You must write something!");
        } else {
          $('#list').append(li);
+         $('#input').val("");
        }
     
      //2. Crossing out an item from the list of items: DONE. 
@@ -37,8 +44,8 @@ function newItem(){
 
      //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
        function deleteListItem(){
-             li.addClass("delete")
-         }
+             li.addClass("delete");
+         };
      // 4. Reordering the items: 
        $('#list').sortable();
     
